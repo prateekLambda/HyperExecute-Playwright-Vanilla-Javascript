@@ -6,10 +6,6 @@ pool:
   vmImage: windows-latest
 
 steps: 
-- bash: echo username
-  env: 
-        LT_USERNAME: $(System.LT_USERNAME)
-        LT_ACCESS_KEY: $(System.LT_ACCESS_KEY)
 
 - script: |
            curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
