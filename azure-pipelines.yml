@@ -6,14 +6,14 @@ pool:
   vmImage: windows-latest
 variables:
 - name: LT_USERNAME
-  value: $LT_USERNAME
+  value: $(LT_USERNAME)
 - name:  LT_ACCESS_KEY
-  value: $LT_ACCESS_KEY
+  value: $(LT_ACCESS_KEY)
 steps: 
    
 - script: |
-           echo %LT_USERNAME%
-           echo %LT_ACCESS_KEY%
+           echo $(LT_USERNAME)
+           echo $(LT_ACCESS_KEY)
            curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
            
-           hyperexecute.exe -u %LT_USERNAME% -k %LT_ACCESS_KEY% -i yaml/win/.hyperexecute_autosplits.yaml --verbose
+           hyperexecute.exe -u $(LT_USERNAME) -k $(LT_ACCESS_KEY) -i yaml/win/.hyperexecute_autosplits.yaml --verbose
