@@ -36,5 +36,5 @@ jobs:
               export LT_ACCESS_KEY=${{ github.event.inputs.accessKey }}
               echo $LT_USERNAME
               echo $LT_ACCESS_KEY
-              ./hyperexecute --user $LT_USERNAME --key $LT_ACCESS_KEY --config yaml/win/cucumber_hyperexecute_autosplit_sample.yaml
+              ./hyperexecute --user $LT_USERNAME --key $LT_ACCESS_KEY --config yaml/win/.hyperexecute_autosplits.yaml
               echo "Test completion"
