@@ -9,9 +9,13 @@ trigger:
 pool:
   vmImage: windows-latest
 
-steps:
+steps: 
+- bash: echo username
+  env: 
+        LT_USERNAME: $(System.LT_USERNAME)
+        LT_ACCESS_KEY: $(System.LT_ACCESS_KEY)
 
 - script: |
            curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
            
-           hyperexecute.exe -u prateek.delguy -k 9DjIGDAUAnyqaNELLFGeGyLCcdW2W4diRXje0U5yaHr8nAReqE -i yaml/win/.hyperexecute_autosplits.yaml --verbose
+           hyperexecute.exe -u $LT_USERNAME -k $LT_ACCESS_KEY -i yaml/win/.hyperexecute_autosplits.yaml --verbose
