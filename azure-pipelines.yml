@@ -4,11 +4,7 @@ trigger:
 
 pool:
   vmImage: windows-latest
-variables:
-- name: LT_USERNAME
-  value: $(LT_USERNAME)
-- name:  LT_ACCESS_KEY
-  value: $(LT_ACCESS_KEY)
+  
 steps: 
    
 - script: |
