@@ -1,4 +1,4 @@
-name: Mainframe Testing
+name: Hyperexecute-Playwright
 on:
   workflow_dispatch:
     inputs:
@@ -10,7 +10,7 @@ on:
         required: true
 
 jobs:
-  MainframTesting:
+  Hyperexecute-Playwright:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     strategy:
