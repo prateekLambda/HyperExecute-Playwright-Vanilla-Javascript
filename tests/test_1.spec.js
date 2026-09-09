@@ -13,7 +13,7 @@ test.describe('PlayWright Vanilla JS - 1', () => {
     await page.click('text=Test Generator');
     await page.click('text=Release notes');
     await page.click('text=Annotations');
-    await page.click('');
+    //await page.click('');
     await page.click('text=Authentication');
     await page.click('text=Command line');
     await page.click('text=Configuration');
