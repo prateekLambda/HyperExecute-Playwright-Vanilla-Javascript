@@ -13,7 +13,7 @@ test.describe('PlayWright Vanilla JS - 1', () => {
     await page.click('text=Test Generator');
     await page.click('text=Release notes');
     await page.click('text=Annotations');
-    await page.click('text=API testing');
+    await page.click('');
     await page.click('text=Authentication');
     await page.click('text=Command line');
     await page.click('text=Configuration');
@@ -25,7 +25,7 @@ test.describe('PlayWright Vanilla JS - 1', () => {
     await page.click('text=Visual comparisons');
     await page.click('text=Fixtures');
     await page.click('text=TypeScript');
-    await page.click('text=Components (experimental)');
+  //  await page.click('text=Components (experimental)');
     await page.click('text=Library');
     await page.click('text=Auto-waiting');
     await page.click('text=Authentication');

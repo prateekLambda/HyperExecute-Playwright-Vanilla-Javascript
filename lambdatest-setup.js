@@ -7,14 +7,15 @@ const capabilities = {
   'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
   'browserVersion': 'latest',
   'LT:Options': {
-    'platform': process.env.HYPEREXECUTE_PLATFORM,
+    'platform': "Windows 10",
     'build': 'Playwright HyperExecute Build',
     'name': 'Playwright HyperExecute Test',
-    'user': process.env.LT_USERNAME,
-    'accessKey': process.env.LT_ACCESS_KEY,
-    // 'network': true,
+    'user': "prateeks",
+    'accessKey': "LT_P34bCYKjw8YgQ6lyXTNf20yGoDJpRTDNxnKMQbN8RUvfA2T",
+    'network': true,
     'video': true,
-    'console': true
+    'console': true,
+    'autoHeal': true
   }
 }
 

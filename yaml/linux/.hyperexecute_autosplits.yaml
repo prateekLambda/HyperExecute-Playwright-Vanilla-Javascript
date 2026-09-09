@@ -7,7 +7,13 @@ runson: linux
 autosplit: true
 retryOnFailure: false
 maxRetries: 1
-concurrency: 2
+concurrency: 4
+tunnel: false
+report: true
+partialReports:
+  frameworkName: playwright
+  location: playwright-report
+  type: html
 pre:
   - npm install
   - npx playwright install

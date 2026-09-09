@@ -5,10 +5,11 @@ const config = {
   testDir: 'tests',
   testMatch: '**/*.spec.js',
   timeout: 120000,
+  reporter: [['html', { open: 'never' }]],
   use: {
     viewport: null
   },
-  workers: 1,
+  workers: 2,
   projects: [
     {
       name: 'chrome:latest@lambdatest',

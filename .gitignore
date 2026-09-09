@@ -1,4 +1,8 @@
 .DS_Store
+node_modules/
+hyperexecute
+hyperexecute-cli.log
+playwright-report/
 .hyperexecute/
 .updatedhyperexecute.yaml
 concierge
