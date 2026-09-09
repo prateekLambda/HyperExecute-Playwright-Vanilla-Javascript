@@ -1,11 +1,16 @@
-name: Hyperexecute-Playwright
+name: Mainframe Testing
 on:
-  schedule:
-    - cron: '30 5,17 * * *'
   workflow_dispatch:
-  
+    inputs:
+      lt_username:
+        description: 'LT Username'
+        required: true
+      lt_accesskey:
+        description: 'LT Access Key'
+        required: true
+
 jobs:
-  HyperExecute-Playwright:
+  MainframTesting:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     strategy:
@@ -19,6 +24,5 @@ jobs:
         run: |
           curl https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute -o hyperexecute
           chmod +x hyperexecute
-          ./hyperexecute --user ${{ secrets.username }} --key ${{ secrets.accesskey }} --download-artifacts --config yaml/win/.hyperexecute_autosplits.yaml
+          ./hyperexecute --user ${{ github.event.inputs.lt_username }} --key ${{ github.event.inputs.lt_accesskey }} --download-artifacts --config --config yaml/win/.hyperexecute_autosplits.yaml
           echo "Test completion"
- 
